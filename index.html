@@ -8,24 +8,34 @@
 </head>
 <body>
     <main>
-        <label for="">Articulo</label>
-        <input type="text" id="input-articulo">
-        <label for="">Cantidad</label>
-        <input type="number" id="input-cantidad">
-        <label for="">Precio Unitario</label>
-        <input type="number" id="input-precio">
-        <select name="alicuot" id="alicuota">
-            <option value="alicuotaUno">Alicuota 1</option>
-            <option value="alicuotaDos" >Alicuota 2</option>
-            <option value="alicuotaTres">Alicuota 3</option>
-        </select>
-
+        <div class="container-input">
+            <div>
+                <label for="">Articulo</label>
+                <input type="text" id="input-articulo">
+            </div>
+            <div>
+                <label for="">Cantidad</label>
+                <input type="number" id="input-cantidad">
+            </div>
+            <div>
+                <label for="">Precio Unitario</label>
+                <input type="number" id="input-precio">
+            </div>
+            <div>
+                <label for="">Alicuota</label>
+                <select name="alicuot" id="alicuota">
+                    <option selected disabled value="" >Seleccione alicuota</option>
+                    <option value="alicuotaUno">Alicuota 1</option>
+                    <option value="alicuotaDos" >Alicuota 2</option>
+                    <option value="alicuotaTres">Alicuota 3</option>
+                </select>
+            </div>
+        </div>
         <div class="container-btn">
-            <button>Agregar Productos</button>
-            <button>Limpiar Carrito</button>
+            <button onclick="agregarProductos()" id="btn-agregar">Agregar Productos</button>
+            <button onclick="limpiarCarro()" id="btn-limpiar">Limpiar Carrito</button>
         </div>
     </main>
-    <script src="sweetalert2.all.min.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
