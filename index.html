@@ -26,16 +26,25 @@
                 <select name="alicuot" id="alicuota">
                     <option selected disabled value="" >Seleccione alicuota</option>
                     <option value="alicuotaUno">Alicuota 1</option>
-                    <option value="alicuotaDos" >Alicuota 2</option>
+                    <option value="alicuotaDos">Alicuota 2</option>
                     <option value="alicuotaTres">Alicuota 3</option>
                 </select>
             </div>
         </div>
+            
         <div class="container-btn">
-            <button onclick="agregarProductos()" id="btn-agregar">Agregar Productos</button>
-            <button onclick="limpiarCarro()" id="btn-limpiar">Limpiar Carrito</button>
+            <button onclick="agregarProductos()" class="btn btn-success">Agregar Productos</button>
+            <button onclick="limpiarCarro()" class="btn btn-success">Limpiar Carrito</button>
         </div>
     </main>
+    <div id="myModal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 5px; width: 300px;">
+            <h5>Confirmación</h5>
+            <p>Los datos se han agregado correctamente.</p>
+            <button id="closeModal" style="background: #007bff; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">Aceptar</button>
+            <button id="closeModalSecondary" style="background: #6c757d; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">Cerrar</button>
+        </div>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>
