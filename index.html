@@ -11,7 +11,7 @@
         <div class="container-input">
             <div>
                 <label for="">Articulo</label>
-                <input type="text" id="input-articulo">
+                <input type="text" id="input-articulo" >
             </div>
             <div>
                 <label for="">Cantidad</label>
@@ -19,7 +19,7 @@
             </div>
             <div>
                 <label for="">Precio Unitario</label>
-                <input type="number" id="input-precio">
+                <input type="number" id="input-precio" >
             </div>
             <div>
                 <label for="">Alicuota</label>
@@ -31,18 +31,35 @@
                 </select>
             </div>
         </div>
-            
         <div class="container-btn">
             <button onclick="agregarProductos()" class="btn btn-success">Agregar Productos</button>
             <button onclick="limpiarCarro()" class="btn btn-success">Limpiar Carrito</button>
         </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre Artículo</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Alícuota</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
     </main>
-    <div id="myModal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);">
-        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 5px; width: 300px;">
-            <h5>Confirmación</h5>
-            <p>Los datos se han agregado correctamente.</p>
-            <button id="closeModal" style="background: #007bff; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">Aceptar</button>
-            <button id="closeModalSecondary" style="background: #6c757d; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">Cerrar</button>
+    <div id="myModal" >
+        <div class="container-modal">
+            <div id="info-modal">
+                <h5>Confirmación</h5>
+                <p>Los datos se han agregado correctamente.</p>
+
+            </div>
+            <div>
+                <button onclick="confirmModal()" id="closeModal" >Confirmar</button>
+                <button onclick="closeModal()" id="closeModalSecondary" >Cerrar</button>
+            </div>
         </div>
     </div>
     <script src="./script.js"></script>
