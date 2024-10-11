@@ -25,9 +25,9 @@
                 <label for="">Alicuota</label>
                 <select name="alicuot" id="alicuota">
                     <option selected disabled value="" >Seleccione alicuota</option>
-                    <option value="alicuotaUno">Alicuota 1</option>
-                    <option value="alicuotaDos">Alicuota 2</option>
-                    <option value="alicuotaTres">Alicuota 3</option>
+                    <option value="21">Alicuota 1</option>
+                    <option value="10.5">Alicuota 2</option>
+                    <option value="27">Alicuota 3</option>
                 </select>
             </div>
         </div>
@@ -35,17 +35,20 @@
             <button onclick="agregarProductos()" class="btn btn-success">Agregar Productos</button>
             <button onclick="limpiarCarro()" class="btn btn-success">Limpiar Carrito</button>
         </div>
-        <table>
+        <table id="tabla-articulos">
             <thead>
                 <tr>
                     <th>Nombre Artículo</th>
                     <th>Cantidad</th>
                     <th>Precio Unitario</th>
-                    <th>Alícuota</th>
+                    <th>Subtotal</th>
+                    <th>IVA</th>
                 </tr>
             </thead>
             <tbody>
-                
+                <tr id="total">
+                    <td>Total</td>
+                </tr>
             </tbody>
         </table>
     </main>
@@ -54,7 +57,6 @@
             <div id="info-modal">
                 <h5>Confirmación</h5>
                 <p>Los datos se han agregado correctamente.</p>
-
             </div>
             <div>
                 <button onclick="confirmModal()" id="closeModal" >Confirmar</button>

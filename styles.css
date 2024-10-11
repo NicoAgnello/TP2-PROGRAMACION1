@@ -120,6 +120,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 2rem;
+    display: none;
 }
 table, th, td {
     border: 1px solid black;
