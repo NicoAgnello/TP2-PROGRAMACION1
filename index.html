@@ -1,69 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carrito de Compras</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
     <main>
-        <div class="container-input">
-            <div>
-                <label for="">Articulo</label>
-                <input type="text" id="input-articulo" >
-            </div>
-            <div>
-                <label for="">Cantidad</label>
-                <input type="number" id="input-cantidad">
-            </div>
-            <div>
-                <label for="">Precio Unitario</label>
-                <input type="number" id="input-precio" >
-            </div>
-            <div>
-                <label for="">Alicuota</label>
-                <select name="alicuot" id="alicuota">
-                    <option selected disabled value="" >Seleccione alicuota</option>
-                    <option value="21">Alicuota 1</option>
-                    <option value="10.5">Alicuota 2</option>
-                    <option value="27">Alicuota 3</option>
-                </select>
-            </div>
+      <div class="container-input">
+        <div>
+          <label for="">Articulo</label>
+          <input
+            type="text"
+            id="input-articulo"
+            oninput="this.value = this.value.toUpperCase();"
+          />
+          >
         </div>
-        <div class="container-btn">
-            <button onclick="agregarProductos()" class="btn btn-success">Agregar Productos</button>
-            <button onclick="limpiarCarro()" class="btn btn-success">Limpiar Carrito</button>
+        <div>
+          <label for="">Cantidad</label>
+          <input type="number" id="input-cantidad" />
         </div>
-        <table id="tabla-articulos">
-            <thead>
-                <tr>
-                    <th>Nombre Artículo</th>
-                    <th>Cantidad</th>
-                    <th>Precio Unitario</th>
-                    <th>Subtotal</th>
-                    <th>IVA</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr id="total">
-                    <td>Total</td>
-                </tr>
-            </tbody>
-        </table>
+        <div>
+          <label for="">Precio Unitario</label>
+          <input type="number" id="input-precio" />
+        </div>
+        <div>
+          <label for="">Alicuota</label>
+          <select name="alicuot" id="alicuota">
+            <option selected disabled value="">Seleccione alicuota</option>
+            <option value="21">Alicuota 1</option>
+            <option value="10.5">Alicuota 2</option>
+            <option value="27">Alicuota 3</option>
+          </select>
+        </div>
+      </div>
+      <div class="container-btn">
+        <button onclick="agregarProductos()" class="btn btn-success">
+          Agregar Productos
+        </button>
+        <button onclick="limpiarCarro()" class="btn btn-success">
+          Limpiar Carrito
+        </button>
+      </div>
+      <table id="tabla-articulos">
+        <thead>
+          <tr>
+            <th>Nombre Artículo</th>
+            <th>Cantidad</th>
+            <th>Precio Unitario</th>
+            <th>Subtotal</th>
+            <th>IVA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="total">
+            <td>Total</td>
+          </tr>
+        </tbody>
+      </table>
     </main>
-    <div id="myModal" >
-        <div class="container-modal">
-            <div id="info-modal">
-                <h5>Confirmación</h5>
-                <p>Los datos se han agregado correctamente.</p>
-            </div>
-            <div>
-                <button onclick="confirmModal()" id="closeModal" >Confirmar</button>
-                <button onclick="closeModal()" id="closeModalSecondary" >Cerrar</button>
-            </div>
+    <div id="myModal">
+      <div class="container-modal">
+        <div id="info-modal">
+          <h5>Confirmación</h5>
+          <p>Los datos se han agregado correctamente.</p>
         </div>
+        <div>
+          <button onclick="confirmModal()" id="closeModal">Confirmar</button>
+          <button onclick="closeModal()" id="closeModalSecondary">
+            Cerrar
+          </button>
+        </div>
+      </div>
     </div>
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>

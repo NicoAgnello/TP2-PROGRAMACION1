@@ -89,6 +89,7 @@ const limpiarCampos = () => {
     document.getElementById('alicuota').value = ''
 }
 
+
 const actualizarTabla = () => {
     const table = document.getElementById('tabla-articulos')
     table.style.display = "table"
